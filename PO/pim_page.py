@@ -32,6 +32,6 @@ class PimPage:
         body_text = self.driver.find_element(By.TAG_NAME, "body").text
         self.driver.execute_script("window.scrollBy(0, 1000);")
         if full_name in body_text:
-            print(f"Name Verified: {full_name}")
+            return f"Name Verified: {full_name}"
         else:
-            print(f"Name Not Found: {full_name}")
+            return f"Name Not Found: {full_name}"
